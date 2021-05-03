@@ -4,4 +4,16 @@
     <select id="selectTodoList">
         select * from todoList
     </select>
+
+    <insert id="insertTodoList">
+        insert into todoList values (#{color}, ${id}, #{text}, ${checked})
+    </insert>
+
+    <update id="updateTodoList">
+        update todoList set checked = ${checked} where id = ${id}
+    </update>
+
+    <delete id="deleteTodoList">
+        delete from todoList where id = ${id}
+    </delete>
 </mapper>
